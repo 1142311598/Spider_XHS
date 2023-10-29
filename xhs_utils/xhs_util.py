@@ -43,11 +43,11 @@ def download_media(path, name, url, type, info=''):
         try:
             if type == 'image':
                 # print(f"{info}图片开始下载, {url}")
-                print(f"{info}图片开始下载")
+                print(f"{info}开始下载")
                 content = requests.get(url).content
                 with open(path + '/' + name + '.jpg', mode="wb") as f:
                     f.write(content)
-                    print(f"{info}图片下载完成")
+                    print(f"{info}下载完成")
             elif type == 'video':
                 print(f"{name}开始下载, {url}")
                 start_time = time.time()
